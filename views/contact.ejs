@@ -1,0 +1,51 @@
+
+<%- include partials/header.ejs %>
+
+<div class="container">
+  <div class="jumbotron"  style="background-color: #E8E9ED;">
+    <h1 class="display-4"><%= title %></h1>
+    <p class="lead">For more information contact me!</p>
+    <hr class="my-4">
+    <div class="contact-form">
+      <form action="/home" method="">
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <label for="inputFirstName">First name</label>
+              <input type="text" class="form-control" id="inputFirstName" value="" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="inputLastName">Last name</label>
+              <input type="text" class="form-control" id="inputLastName" value="" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6">
+              <label for="inputEmail">Email</label>
+              <input type="email" class="form-control" id="inputEmail" required>
+            </div>
+            <div class="col-md-6">
+              <label for="inputPhone">Phone</label>
+              <input type="phone" class="form-control" id="inputPhone">
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-12">
+              <label for="inputMessage">Message</label>
+              <textarea class="form-control" id="inputMessage" rows="3" required></textarea>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<%- include partials/footer.ejs %>
