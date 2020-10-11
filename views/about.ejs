@@ -1,14 +1,24 @@
 
 <%- include partials/header.ejs %>
 
-<div class="container">
+<main class="container">
   <div class="jumbotron">
     <h1 class="display-4"><%= title %></h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="/assets/pdfs/Resume_Femees Muthuvassery Kunjumoideen.pdf" role="button" target="_blank">download my resume!</a>
+    <p class="lead sub-heading">Femees Kunjumoideen, Ontario Canada.</p>
+    <div class="row">
+      <div class="col-md-4 col-lg-3">
+        <img src="/assets/images/profile-pic.jpg" class="img-thumbnail img-fluid" alt="femees_profile_pic">        
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <p class="lead">My name is Femees. I m in Toronto, Ontario. I am studying Software Engineering Artificial intelligence in Centennial College. Prior to that, for 2 years I was working as Customer support agent for Intuit Canada. I was working as Senior relationship officer in India for 7 years before migrating to Canada.</p>
+        <hr class="my-4">
+        <p class="lead">
+          You can get my resume bt clicking the button below.
+        </p>
+        <a class="btn btn-primary btn-lg" href="/assets/pdfs/Resume_Femees Muthuvassery Kunjumoideen.pdf" role="button" target="_blank">download my resume!</a>
+      </div>
+    </div>    
   </div>
-</div>
+</main>
 
 <%- include partials/footer.ejs %>

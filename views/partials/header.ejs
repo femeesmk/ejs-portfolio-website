@@ -13,14 +13,20 @@
 
 </head>
 
-<body>
+<body class="<%= slug %>">
   <header>
     <div class="container">
-
       <div class="logo">
         <a href="/home">
           <img class="img-responsive" src="/assets/images/typo_logo.png" alt="Femees Logo">
         </a>
+      </div>
+      <div class="social-media">
+        <ul>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></i></a></li>
+          <li><a href="#"><i class="fab fa-github"></i></a></li>
+        </ul>
       </div>
 
       <%- include main_nav.ejs %>

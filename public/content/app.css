@@ -11,9 +11,30 @@ header {
   max-width: 200px;
 }
 
+/* social media icon */
+.social-media ul {
+  padding-left: 0;
+  text-align: center;
+  padding-top: 20px;
+}
+.social-media ul li a i {
+  font-size: 22px;
+}
+.social-media ul li {
+  display: inline-block;
+  padding: 8px;
+}
+.social-media ul li a {
+  color: #8D99AE;
+}
+
+.social-media ul li a:hover {
+  color: #f2545b;
+}
+
 /* main navigation styles  */
 .main-navigation {
-  margin-top: 50px;
+  margin-top: 35px;
 }
 .main-navigation ul li {
   text-transform: uppercase;
@@ -32,7 +53,41 @@ header {
 .jumbotron {
   background-color: transparent;
 }
-/* footer styles */
+.jumbotron h1 {
+  color: #2B3A67;
+  font-weight: 600;
+}
+.jumbotron h5 {
+  color: #EF6F6C;
+  font-weight: 700;
+}
+.jumbotron .sub-heading {
+  color: #5B6C5D;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.home .jumbotron .sub-heading, .home .jumbotron .sub-heading p {
+  color: #1b343f;
+}
+
+.contact .jumbotron .sub-heading {
+  color: #5B6C5D;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact .jumbotron .sub-heading .name {
+  font-weight: 600;
+  font-size: 22px;  
+}
+
+.contact .jumbotron .sub-heading i {
+  color: #f2545b;
+  margin-right: 10px;
+}
+
+/* footer styles */ 
 footer {
   padding: 20px 0;
   margin-top: 25px;
