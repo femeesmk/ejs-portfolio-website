@@ -109,6 +109,9 @@ footer {
   margin-bottom: 10px;
   display: inline-block;
 }
+.manage-contact {
+  padding: 0 20px;
+}
 
 /* contact creation page  */
 .contact-creation .form-group label {
