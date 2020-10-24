@@ -1,3 +1,8 @@
+/** common styles */
+.btn .fa, .btn .fas {
+  padding-right: 4px;
+}
+
 /* Header styles */
 header {
   padding-top: 3vh;
@@ -104,10 +109,6 @@ footer {
   margin-bottom: 10px;
   display: inline-block;
 }
-.contact-lists .contact-list-item .fa {
-  padding-right: 5px;
-}
-
 
 /* contact creation page  */
 .contact-creation .form-group label {
@@ -124,7 +125,4 @@ footer {
   margin-right: 15px;
   margin-bottom: 15px;
   display: inline-block;
-}
-.contact-creation .form-buttons .fas {
-  padding-right: 5px;
 }
