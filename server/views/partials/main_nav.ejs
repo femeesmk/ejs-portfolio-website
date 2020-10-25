@@ -1,4 +1,4 @@
-<nav class="main-navigation navbar navbar-expand-md navbar-light" style="background-color: #CCE6F4;">
+<nav class="main-navigation navbar navbar-expand-lg navbar-light" style="background-color: #CCE6F4;">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -8,7 +8,7 @@
         <a class="nav-link <%= slug === 'home' && 'active' %>" href="/home">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <%= slug === 'about' && 'active' %>" href="/about">About Me</a>
+        <a class="nav-link <%= slug === 'about' && 'active' %>" href="/about">About</a>
       </li>
       <li class="nav-item">
         <a class="nav-link <%= slug === 'projects' && 'active' %>" href="/projects">Projects</a>
@@ -17,11 +17,21 @@
         <a class="nav-link <%= slug === 'services' && 'active' %>" href="/services">Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link <%= slug === 'contact' && 'active' %>" href="/contact">Contact Me</a>
+        <a class="nav-link <%= slug === 'contact' && 'active' %>" href="/contact">Contact</a>
       </li>
-      <li class="nav-item login">
-        <a class="nav-link <%= slug === 'login' && 'active' %>" href="/login"> <i class="fas fa-sign-in-alt"></i> Login</a>
+      <li class="nav-item">
+        <a class="nav-link <%= slug === 'contacts' && 'active' %>" href="/contact-list">Business Contacts</a>
       </li>
+      <% if(typeof displayName == 'string' && displayName) { %>        
+        <li class="nav-item login">
+          <a class="nav-link <%= slug === 'login' && 'active' %>" href="/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+        </li>
+      <% } else { %>
+        <li class="nav-item login">
+          <a class="nav-link <%= slug === 'login' && 'active' %>" href="/login"> <i class="fas fa-sign-in-alt"></i> Login</a>
+        </li>
+      <% } %>
+
     </ul>
   </div>
 </nav>

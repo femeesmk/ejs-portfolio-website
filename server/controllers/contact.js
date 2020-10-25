@@ -14,6 +14,7 @@ module.exports.displayContactItems = (req, res, next) => {
       res.render('contact/list', {
         title: 'Business Contacts',
         slug: 'contacts',
+        displayName: req.user ? req.user.displayName : '',
         contactList: contacts,
       });
     }
@@ -28,7 +29,8 @@ module.exports.displayContactItems = (req, res, next) => {
 module.exports.displayAddContactItem = (req, res, next) => {
   res.render('contact/add', { 
     title: 'Add Contact', 
-    slug: 'add-contact' 
+    slug: 'contacts', 
+    displayName: req.user ? req.user.displayName : ''
   });
 }
 
@@ -65,7 +67,8 @@ module.exports.displayEditContactPage = (req, res, next) => {
     } else {
       res.render('contact/edit', {
         title: 'Edit Contact',
-        slug: 'edit-contact',
+        slug: 'contacts',
+        displayName: req.user ? req.user.displayName : '',
         contact: selectedContact,
       });
     }

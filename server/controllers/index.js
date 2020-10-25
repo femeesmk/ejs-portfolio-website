@@ -9,27 +9,27 @@ let User = userModel.User; // alias
 
 //home page
 module.exports.displayHomePage = (req, res, next) => {
-  res.render('home', { title: 'Home', slug: 'home' });
+  res.render('home', { title: 'Home', slug: 'home', displayName: req.user ? req.user.displayName : '' });
 };
 
 //about page
 module.exports.displayAboutPage = (req, res, next) => {
-  res.render('about', { title: 'About Me', slug: 'about' });
+  res.render('about', { title: 'About Me', slug: 'about', displayName: req.user ? req.user.displayName : '' });
 };
 
 //projects page
 module.exports.displayProjectsPage = (req, res, next) => {
-  res.render('projects', { title: 'Projects', slug: 'projects' });
+  res.render('projects', { title: 'Projects', slug: 'projects', displayName: req.user ? req.user.displayName : '' });
 };
 
 //service page
 module.exports.displayServicePage = (req, res, next) => {
-  res.render('services', { title: 'Services', slug: 'services' });
+  res.render('services', { title: 'Services', slug: 'services', displayName: req.user ? req.user.displayName : '' });
 };
 
 // contact page
 module.exports.displayContactPage = (req, res, next) => {
-  res.render('contact', { title: 'Contact Me', slug: 'contact' });
+  res.render('contact', { title: 'Contact Me', slug: 'contact', displayName: req.user ? req.user.displayName : '' });
 };
 
 // login
@@ -43,8 +43,10 @@ module.exports.displayLoginPage = (req, res, next) => {
       displayName: req.user ? req.user.displayName : '',
     });
   } else {
-    return res.redirect('/');
+    return res.redirect('/contact-list');
   }
+
+  console.log(req.user);
 };
 
 // process login
@@ -90,7 +92,7 @@ module.exports.displayRegisterPage = (req, res, next) => {
   if (!req.user) {
     res.render('auth/register', {
       title: 'Register',
-      slug: 'login',
+      slug: 'register',
       notification: req.flash('registerMessage'),
       displayName: req.user ? req.user.displayName : '',
     });
@@ -122,6 +124,7 @@ module.exports.processRegistration = (req, res, next) => {
       }
       return res.render('auth/register', {
         title: 'Register',
+        slug: 'register',
         notification: req.flash('registerMessage'),
         displayName: req.user ? req.user.displayName : '',
       });

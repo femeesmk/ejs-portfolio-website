@@ -18,6 +18,9 @@
   margin-bottom: 15px;
   display: inline-block;
 }
+.container strong {
+  font-weight: bold;
+}
 
 /* Header styles */
 header {
@@ -63,7 +66,7 @@ header {
 }
 .main-navigation .navbar-nav .nav-link {
   color: #1b343f;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .main-navigation .navbar-nav .nav-link.active,
 .main-navigation .navbar-nav .login .nav-link.active .fas {
@@ -71,6 +74,10 @@ header {
 }
 
 /* login icon color */
+.main-navigation .navbar-nav .login
+{
+  font-weight: bold;
+}
 .main-navigation .navbar-nav .login .fas
 {
   color: #0069d9;
