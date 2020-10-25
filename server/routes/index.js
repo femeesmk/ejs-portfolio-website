@@ -29,10 +29,10 @@ router.post('/login', indexController.processLogin);
 router.get('/logout', indexController.processLogout);
 
 /* displaying Register page */
-router.get('/register', indexController.displayRegisterPage);
+// router.get('/register', indexController.displayRegisterPage);
 
 /* process Registration */
-router.post('/register', indexController.processRegistration);
+// router.post('/register', indexController.processRegistration);
 
 module.exports = router;
  
