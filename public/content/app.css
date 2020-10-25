@@ -2,6 +2,22 @@
 .btn .fa, .btn .fas {
   padding-right: 4px;
 }
+/* form styles  */
+.form-group label {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.form-buttons {
+  padding-top: 10px;
+  margin-top: 15px;
+}
+
+.form-buttons .btn {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
 
 /* Header styles */
 header {
@@ -49,8 +65,15 @@ header {
   color: #1b343f;
   font-size: 1.2em;
 }
-.main-navigation .navbar-nav .nav-link.active {
+.main-navigation .navbar-nav .nav-link.active,
+.main-navigation .navbar-nav .login .nav-link.active .fas {
   color: #f2545b;
+}
+
+/* login icon color */
+.main-navigation .navbar-nav .login .fas
+{
+  color: #0069d9;
 }
 
 /* content styles */
@@ -111,21 +134,4 @@ footer {
 }
 .manage-contact {
   padding: 0 20px;
-}
-
-/* contact creation page  */
-.contact-creation .form-group label {
-  font-weight: 500;
-  font-size: 1.2em;
-}
-
-.contact-creation .form-buttons {
-  padding-top: 10px;
-  margin-top: 15px;
-}
-
-.contact-creation .form-buttons .btn {
-  margin-right: 15px;
-  margin-bottom: 15px;
-  display: inline-block;
 }

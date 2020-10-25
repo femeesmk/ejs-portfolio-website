@@ -1,0 +1,48 @@
+<%- include ../partials/header.ejs %>
+
+<main class="container">
+  <div class="jumbotron">
+    <h1 class="display-4"><%= title %></h1>
+    <p class="lead">
+      Login to access your account!  
+    </p>
+    <p class="sub-lead"> If you are new <a href="/register">Register Here!</a></p>
+    <br class="my-1">
+
+    <% if(notification.length > 0) {%>
+      <div class="notification-message row">
+        <div class="col-sm-6">
+          <div class="alert alert-danger">
+            <%= notification %>
+          </div>
+        </div>        
+      </div>
+      <br class="my-1">
+    <% } %>
+
+    <div class="login-form row">
+      <form class="col-sm-6" method="POST" autocomplete="off">
+        <fieldset class="form-group">
+          <label for="username">Username: </label>
+          <input type="text" class="form-control" name="username" placeholder="Enter username" id="username" required
+            autofocus>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <label for="password">Password: </label>
+          <input type="password" class="form-control" name="password" placeholder="Enter password" id="password"
+            required>
+        </fieldset>
+
+        <fieldset class="form-group form-buttons">
+          <button class="btn btn-success" type="submit"> <i class="fas fa-sign-in-alt"></i> Login</button>
+          <a href="/" class="btn btn-warning" role="button"> <i class="fas fa-undo"></i> Cancel</a>
+        </fieldset>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+<%- include ../partials/footer.ejs %>
